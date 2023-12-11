@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Page</title>
+    <link rel="stylesheet" href="teachers.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <header class="page-header">
+            <h1 id="attendify-title">Attendify</h1>
+            <div class="mode-buttons">
+                <a href="student.html"><button type="button" class="mode-btn" id="student-mode">Student Mode</button></a>
+                <button type="button" class="mode-btn" id="teacher-mode">Teacher Mode</button>
+            </div>
+        </header>
+    <div class="container">
+        <h1>
+            <span class="highlight">Welcome back! 
+                
+            </span>
+            Start generating codes for today's class.
+        </h1>
+        <h2 class="generate">
+            Press on the button below to generate codes.
+        </h2>
+        
+        <form id="checkInForm">
+            <button type="button" id="generateButton" class="submit-btn" onclick="toggleGenerateButton()">Generate codes</button>
+            <button type="button" class="submit-btn2">Check list of attending students</button>
+        </form>
+        
+    </div>
+</body>
+</html>
+
+
+<script>
+    function toggleGenerateButton() {
+        var generateButton = document.getElementById('generateButton');
+        if (generateButton.textContent === 'Generate codes') {
+            generateButton.textContent = 'Stop Generating';
+            generateButton.classList.add('red');
+        } else {
+            generateButton.textContent = 'Generate codes';
+            generateButton.classList.remove('red');
+        }
+    }
+</script>
+    
